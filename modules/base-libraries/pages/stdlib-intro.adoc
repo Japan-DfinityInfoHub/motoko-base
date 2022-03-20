@@ -1,3 +1,38 @@
+= {proglang} 基本ライブラリの使用
+:proglang: Motoko
+:company-id: DFINITY
+
+{proglang} の設計においては、組み込みの型や操作を最小限にするように努めています。
+組み込み型を用いる代わりに、{proglang} では多くの種類の一般的な操作を処理するモジュールの基本ライブラリを提供し、言語の完成度を高めています。
+この基本ライブラリは、コアな機能をサポートするモジュールとともに現在も進化しており、基本ライブラリのすべてのAPIは、程度の差こそあれ、時間の経過とともに変更される可能性があります。
+特に、基本ライブラリに含まれるモジュールや機能の規模や数は飛躍的に増加する可能性があり、基本ライブラリのモジュールの更新により、互換性を維持するためにプログラムを更新しなければならないような破壊的な変更が生じる可能性があることに注意する必要があります。
+
+== 基本ライブラリからのインポート
+
+基本ライブラリからインポートするには、`import` キーワードに続いて、ローカルモジュール名と、インポートしたいモジュールを見つけるための URL を指定します。
+例えば、以下のようになります:
+
+....
+import Debug "mo:base/Debug";
+Debug.print("hello world");
+....
+
+この例では、`mo:` プレフィックスで示される {proglang} コードを、`base/` で示される基本ライブラリパスとモジュール名 `Debug` を使ってインポートする方法を示しています。
+また、相対パスを使って {proglang} コードや他のモジュールをインポートすることもできます。
+例えば、メインのプログラムと同じフォルダに `+types.mo+` という名前の {proglang} プログラムを作成した場合、次のような import 宣言でインクルードすることができます:
+
+....
+import Types "./types";
+....
+
+== 基本ライブラリのモジュールを見るには
+
+{proglang} 基本ライブラリのソースコードとドキュメントは、オープンソースのリポジトリである link:https://github.com/dfinity/motoko-base[motoko-base] でご覧いただけます。
+リポジトリには、{proglang} 基本ライブラリの現在のドキュメントのローカルコピーを生成するための手順が示されています。
+
+また、Developer Center のどのページでも「検索」を使ってドキュメントを検索することができます。
+
+////
 = Using {proglang} base modules
 :proglang: Motoko
 :company-id: DFINITY
@@ -31,3 +66,4 @@ You can find source code and documentation for {proglang} base modules in the li
 There are instructions in the repository for generating a local copy of the current documentation for the {proglang} base library.
 
 You can also search for documentation by using Search in any page of the Developer Center.
+////

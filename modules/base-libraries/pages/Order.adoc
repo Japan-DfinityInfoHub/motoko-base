@@ -11,7 +11,7 @@ Order
 type Order = {#less; #equal; #greater}
 ----
 
-A type to represent an order.
+Order を表す型
 
 [[isLess]]
 == isLess
@@ -21,7 +21,7 @@ A type to represent an order.
 func isLess(order : xref:#type.Order[Order]) : Bool
 ----
 
-Check if an order is #less.
+Order が #less かどうかのチェック
 
 [[isEqual]]
 == isEqual
@@ -31,7 +31,7 @@ Check if an order is #less.
 func isEqual(order : xref:#type.Order[Order]) : Bool
 ----
 
-Check if an order is #equal.
+Order が #equal かどうかのチェック
 
 [[isGreater]]
 == isGreater
@@ -41,7 +41,7 @@ Check if an order is #equal.
 func isGreater(order : xref:#type.Order[Order]) : Bool
 ----
 
-Check if an order is #greater.
+Order が #greater かどうかのチェック
 
 [[equal]]
 == equal
@@ -51,5 +51,5 @@ Check if an order is #greater.
 func equal(o1 : xref:#type.Order[Order], o2 : xref:#type.Order[Order]) : Bool
 ----
 
-Returns true if only if  `o1` and `o2` are the same ordering.
+`o1` と `o2` が同じ順序である場合にのみ真（true）を返す
 
